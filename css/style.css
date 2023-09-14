@@ -1,0 +1,53 @@
+
+.flexContainer {
+    display:flex;
+    flex-direction: row;
+}
+
+.child {
+    width: 33%;
+    margin: 5%;
+    padding: 5%;
+}
+
+
+<!-- My UX Skills section coded using CSS flex -->
+
+.workGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'voyage voyage1'
+    'music music1';
+}
+
+.voyage {
+    grid-area: voyage;
+}
+
+.voyage1 {
+    grid-area: voyage1;
+}
+
+.music {
+    grid-area: music;
+}
+
+.music1 {
+    grid-area: music1;
+}
+
+<!-- My Work Section Constructed using CSS Grid -->
+
+@media only screen and (max-width: 600){
+    .flexContainer{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .workGrid {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "voyage" "voyage1" "music" "music1";
+    }
+}
